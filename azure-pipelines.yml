@@ -24,5 +24,11 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: '**/*.nupkg'
+    ArtifactName: 'Innofactor.EfCoreJsonValueConverter.$(version).nupkg'
+    publishLocation: 'Container'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'Innofactor.EfCoreJsonValueConverter.Attributes.$(version).nupkg'
     publishLocation: 'Container'
